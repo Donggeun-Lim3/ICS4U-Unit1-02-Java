@@ -18,10 +18,6 @@ public final class Energy {
     * Speed of light: 2.998*10^8 m/s.
     */
     static final double SPEED_OF_LIGHT = 2.998e8;
-    /**
-    * A thousand tons of TNT would release about 4 TJ of energy (TJ: 10^12J).
-    */
-    static final double POWER_OF_BOMB = 4.0e12;
 
     /**
     * Prevent instantiation.
@@ -53,17 +49,14 @@ public final class Energy {
             // Process
             final float amountOfEnergy = massOfObject
                            * (float) Math.pow(SPEED_OF_LIGHT, 2);
-            final float equivalentBomb = amountOfEnergy / (float) POWER_OF_BOMB;
 
             // Output
-            System.out.println("If " + massOfObject
-                + " kg of mass was converted to energy, it would produce "
-                + amountOfEnergy + "J of energy.\nOr this would be "
-                + "equivalent to a " + equivalentBomb + " kiloton bomb.");
+            System.out.println(massOfObject + "kg of mass would produce "
+                + amountOfEnergy + "J of energy.");
         }
         catch (java.util.InputMismatchException errorCode) {
             System.err.print("Invalid input");
         }
+        System.err.print("\nDone.");
     }
 }
-
