@@ -55,8 +55,8 @@ public final class Energy {
                 + amountOfEnergy + "J of energy.");
         }
         catch (java.util.InputMismatchException errorCode) {
-            System.err.print("Invalid input");
+            System.err.print("Invalid input\n");
         }
-        System.err.print("\nDone.");
+        System.err.print("\nDone.\n");
     }
 }
